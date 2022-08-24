@@ -15,7 +15,7 @@ const SinglePortfolio = ({ project }) => {
                 <div className='px-5 flex py-5 md:py-8 gap-3 flex-wrap'>
                     {project.tags.map((tag) => (
                         <div className='md:flex-row' key={tag.tag}>
-                            <p className='bg-black opacity-50 text-white p-1 text-xs md:text-base px-3 rounded-full'>{tag.tag}</p>
+                            <p className='bg-black opacity-70 text-white p-1 text-xs md:text-base px-3 rounded-full'>#{tag.tag}</p>
                         </div>
                     ))}
                 </div>
