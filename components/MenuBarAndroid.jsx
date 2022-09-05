@@ -20,7 +20,7 @@ const MenuBarAndroid = ({ OnExit, HomePage }) => {
         }
 
         {!HomePage &&
-          <div className='flex-col gap-y-10 flex divide-y-2'>
+          <div className='flex-col h-full gap-y-10 flex divide-y-2'>
             <p className='hidden transition duration-500 ease-in-out text-white text-lg cursor-pointer hover:text-red-500 hover:-translate-y-1'>Dummy Line</p>
             <Link href='/'><a><p className='transition duration-500 ease-in-out text-white text-lg cursor-pointer hover:text-red-500 hover:-translate-y-1'>Home</p></a></Link>
             <Link href='/projects'><a><p className='transition duration-500 ease-in-out text-white text-lg cursor-pointer hover:text-red-500 hover:-translate-y-1'>Projects</p></a></Link>

@@ -46,6 +46,8 @@
 html, body {
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .backgroundOverlay {

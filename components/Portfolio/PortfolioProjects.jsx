@@ -26,7 +26,7 @@ const responsive = {
 
 const PortfolioProjects = ({categories}) => {
   return (
-    <div className='md:px-10 p-6 px-5 justify-center bg-black'>
+    <div className='md:px-10 p-6 px-5 pb-20 justify-center bg-black'>
       {categories.map((category) => (
         <Carousel key={category.node.name}
           additionalTransfrom={0}

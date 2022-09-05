@@ -9,7 +9,7 @@ const Navbar = ({ OnButtonPress, HomePage }) => {
         <div className='w-full bg-black md:px-10 p-6 px-5'>
             <div className='flex'>
                 <div className='flex-row w-full'>
-                    <p className='text-white text-bold text-base md:text-xl cursor-pointer'>Jeffery Ozoekwe-Awagu</p>
+                    <Link href='./'><a><p className='text-white text-bold text-base md:text-xl cursor-pointer'>Jeffery Ozoekwe-Awagu</p></a></Link>
                 </div>
                 <div className='hidden md:flex md:flex-row-reverse w-full'>
                     {HomePage &&
