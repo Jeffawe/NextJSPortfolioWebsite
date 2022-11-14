@@ -7,11 +7,11 @@ const Footer = () => {
           <h1 className='text-white font-normal text-xl md:text-3xl text-center'>I'll love to hear from you</h1>
         </div>
         <div className='pt-8 select-all w-full'>
-          <p className='text-white font-normal text-base md:text-xl text-center'>awagujeffery@gmail.com</p>
+          <p className='text-white font-normal text-base md:text-xl text-center'>ozoekweawagu@gmail.com</p>
         </div>
-        <div className='pt-2 select-all w-full'>
+        {/* <div className='pt-2 select-all w-full'>
           <p className='text-white font-normal text-base md:text-xl text-center'>08121469989</p>
-        </div>
+        </div> */}
     </div>
   )
 }

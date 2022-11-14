@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import { useState } from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { getProjects, getCategories } from '../services/index'
+import { getCategories } from '../services/index'
 
 
 import { Navbar, PortfolioProjects, MenuBarAndroid, BottomFooter } from '../components/index';
