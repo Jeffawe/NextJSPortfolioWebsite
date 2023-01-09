@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 const SinglePortfolio = ({ project }) => {
     return (
-        <div className='container block'>
-            <div className='text-center relative bg-white rounded-2xl equalSize'>
+        <div className='col-span-1'>
+            <div className='text-center relative'>
                 <div className=''>
-                    <img src={project.featuredImage.url} alt={project.name} className='w-full h-auto' />
+                    <img src={project.featuredImage.url} alt={project.name} className='w-full h-60 object-fill' />
                 </div>
                 <div className='pt-3 md:pt-5 px-5'>
                     <h1 className='font-bold md:text-xl text-lg'>{project.name}</h1>
