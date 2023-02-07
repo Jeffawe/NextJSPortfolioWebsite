@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
+import { getDetails } from '../services'
 
 import { Navbar, HomeMenu, AboutUs, Projects, Footer, MenuBarAndroid, BottomFooter} from '../components/index' 
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ details }:any) => {
   const [MenuBar, setMenuBar] = useState(false);
   const [HomePage, setHomePage] = useState(true);
 
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
         <div className='w-screen'>
           <Navbar OnButtonPress = {OnButtonPress} HomePage = {HomePage} />
           <HomeMenu />
-          <AboutUs />
+          <AboutUs details = {details}/>
           <Projects />
           <Footer />
           <BottomFooter />
@@ -44,7 +45,7 @@ const Home: NextPage = () => {
           <div className='blur-sm'>
             <Navbar OnButtonPress = {OnButtonPress} HomePage = {HomePage}  />
             <HomeMenu />
-            <AboutUs />
+            <AboutUs details = {details}/>
             <Projects />
             <Footer />
             <BottomFooter />
@@ -57,3 +58,12 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export async function getStaticProps() {
+  const details = (await getDetails()) || [];
+
+  return {
+      props: { details }
+  }
+      
+}

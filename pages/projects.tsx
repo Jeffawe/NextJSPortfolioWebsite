@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Head from 'next/head'
 import { getCategories } from '../services/index'
 
-
 import { Navbar, PortfolioProjects, MenuBarAndroid, BottomFooter } from '../components/index';
 
 const Projects: NextPage = ( { categories }:any ) => {
@@ -17,8 +16,6 @@ const Projects: NextPage = ( { categories }:any ) => {
     const OnExit = () => {
         setOpenMenu(false);
     }
-
-    console.log(categories);
 
     return (
         <div className='scroll-smooth w-screen relative'>
