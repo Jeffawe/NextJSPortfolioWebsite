@@ -1,24 +1,72 @@
 import React from 'react'
-import Image from 'next/image'
+import { BsGithub } from "react-icons/bs";
+import { FaGlobe } from "react-icons/fa";
+//{project.featuredImage.url}
 
 const SinglePortfolio = ({ project }) => {
+    console.log(project.links[0].link1.toString())
+
+    //Checks the Links to see which icon to use
+    const CheckLinks = (link) => {
+        console.log(link)
+        if (link == null) {
+            return null
+        } else {
+            let s_link = link;
+            let linkBefore = s_link.split('@')[0];
+            const linkAfter = s_link.split('@')[1];
+            console.log(s_link)
+            //let linkBefore = s_link.split('@')[0];
+            if (linkBefore == "Github") {
+                return (
+                    <a href={linkAfter} key={link}>
+                        <BsGithub />
+                    </a>
+                )
+            } else if (linkBefore == "Website") {
+                return (
+                    <a href={linkAfter} key={link}>
+                        <FaGlobe />
+                    </a>
+                )
+            } else if (linkBefore == "itch") {
+                return (
+                    <a href={linkAfter} key={link}>
+                        <FaGlobe />
+                    </a>
+                )
+            } else {
+                return (
+                    <a href={linkAfter} key={link}>
+                        <FaGlobe />
+                    </a>
+                )
+            }
+        }
+    }
+
+    //Pushes the icons to a new array to display
+    const linksToShow = () => {
+        let linkArray = []
+
+        linkArray.push(CheckLinks(project.links[0].link1))
+        linkArray.push(CheckLinks(project.links[0].link2))
+        linkArray.push(CheckLinks(project.links[0].link3))
+
+        return linkArray
+    }
+
     return (
-        <div className='col-span-1'>
-            <div className='text-center relative'>
-                <div className=''>
-                    <img src={project.featuredImage.url} alt={project.name} className='w-full h-60 object-fill' />
+        <div className="project-card">
+            <div className="project-img">
+                <img src={project.featuredImage.url} alt={project.name} />
+                <div className="project-links">
+                    {linksToShow()}
                 </div>
-                <div className='pt-3 md:pt-5 px-5'>
-                    <h1 className='font-bold md:text-xl text-lg'>{project.name}</h1>
-                    <p className='font-light md:text-lg text-base pt-2'>{project.description}</p>
-                </div>
-                <div className='px-5 flex py-5 md:py-8 gap-3 flex-wrap'>
-                    {project.tags.map((tag) => (
-                        <div className='md:flex-row' key={tag.tag}>
-                            <p className='bg-black opacity-70 text-white p-1 text-xs md:text-base px-3 rounded-full'>#{tag.tag}</p>
-                        </div>
-                    ))}
-                </div>
+            </div>
+            <div className="project-info">
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
             </div>
         </div>
     )

@@ -4,10 +4,11 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import Link from 'next/link';
+import 'animate.css';
 
 const MenuBarAndroid = ({ OnExit, HomePage }) => {
   return (
-    <div className='md:hidden grid grid-cols-9 w-3/4 bg-black h-96 absolute z-40 rounded-r-lg '>
+    <div className='md:hidden grid grid-cols-9 w-3/4 bg-black h-96 absolute z-40 rounded-r-lg animate__animated animate__slideInLeft'>
       <div className='p-10 flex flex-col col-span-7'>
         {HomePage &&
           <div className='flex-col gap-y-10 flex divide-y-2'>

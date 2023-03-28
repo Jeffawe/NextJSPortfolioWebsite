@@ -33,6 +33,11 @@ export const getProjects = async () => {
                         tags(orderBy: tag_ASC) {
                             tag
                         }
+                        links {
+                            link1
+                            link2
+                            link3
+                        }
                     }
                 }
             }
@@ -58,7 +63,11 @@ export const getCategories = async () => {
                             featuredImage {
                                 url
                             }
-                            link
+                            links {
+                                link1
+                                link2
+                                link3
+                            }
                         }
                         name
                     }

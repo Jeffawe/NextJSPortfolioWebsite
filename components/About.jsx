@@ -10,7 +10,7 @@ const About = ({details}) => {
       <div className='pb-20'>
         <p className='text-white text-bold text-base md:text-xl text-center px-8 md:px-10 lg:px-20'>
           {details.aboutMe}
-          <a href='https://www.instagram.com/jeff_awagu/'><br />Connect with me @jeff_awagu on instagram or </a><Link href="#contact"><a>send me a mail at ozoekweawagu@gmail.com</a></Link>.
+          &nbsp; Connect with me <a href='https://www.instagram.com/jeff_awagu/' className='text-red-500'><br />@jeff_awagu</a> on instagram or send me a mail at <a href="mailto:ozoekweawagu@gmail.com" className='text-red-500'> ozoekweawagu@gmail.com</a>.
         </p>
       </div>
     </div>
