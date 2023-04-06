@@ -4,18 +4,13 @@ import { FaGlobe } from "react-icons/fa";
 //{project.featuredImage.url}
 
 const SinglePortfolio = ({ project }) => {
-    console.log(project.links[0].link1.toString())
-
     //Checks the Links to see which icon to use
     const CheckLinks = (link) => {
-        console.log(link)
         if (link == null) {
             return null
         } else {
-            let s_link = link;
-            let linkBefore = s_link.split('@')[0];
-            const linkAfter = s_link.split('@')[1];
-            console.log(s_link)
+            let linkBefore = link.split('@')[0];
+            const linkAfter = link.split('@')[1];
             //let linkBefore = s_link.split('@')[0];
             if (linkBefore == "Github") {
                 return (

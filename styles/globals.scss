@@ -48,6 +48,7 @@ html, body {
   scroll-behavior: smooth;
   max-width: 100%;
   overflow-x: hidden;
+  background-color: #25231E;
 }
 
 .backgroundOverlay {
@@ -133,7 +134,7 @@ html, body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #171613;
   padding: 20px;
 }
 
@@ -176,7 +177,7 @@ html, body {
 
 .project-card .project-links a {
   display: inline-block;
-  color: black;
+  color: white;
   font-size: 1.2rem;
   text-decoration: none;
   margin: 10px;
@@ -196,6 +197,10 @@ html, body {
 
 .links:hover {
   color: red;
+}
+
+.project-links a:hover {
+  border: 2px solid red;
 }
 
 @media screen and (max-width: 768px) {
